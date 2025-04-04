@@ -1,38 +1,98 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
+
 <head>
+    <!-- ALL meta -->
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About me</title>
-    <link rel="stylesheet" href="/css/style.css">
+    <meta name="viewport" content="width=device-width">
+    <meta name="author" content="Крынина Александра">
+    
+    <title>Контакты</title>
+
+    <!-- ALL links -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" href="img/favicon.ico" type="image/x-icon">
+
 </head>
-<body class="flex-container">
-    <main>
-        <body>
-            <header class = "container">
-                <nav>
-                    <ul>
-                        <li> <a href="/index.html">Биография</a></li>
-                        <li> <a href="/resume.html">Резюме</a></li>
-                        <li> <a href="/gallery.html">Галлерея</a></li>
-                        <li class="active"> <a href="/hobby.html">Хобби</a></li>
-                    </ul>
-                </nav>
-            </header>
-            <header class="hero container2">
-                <header class="hero--info2">
-                    <aside class="hero-left2">
-                        <h1 class="title2">Мои хобби</h1>
-                    </aside>
-                    <aside class="hero-right2">
-                        <p class="fr2">Люблю музыку. Мои любимые исполнители это pyrokinesis, stray kids, Jackson Wang и другие. <br> Сейчас очень нравятся mzlff и ПОЛМАТЕРИ.</p>
-                        <p class="sec2">Ещё я очень люблю читать, обычно я читаю ужасы или фантастику.<br> Также бывает играю в компьютерные игры, наприер Wuthering Waves и Counter-Strike.</p>
-                    </aside>
-                </header>        
-            </header>
-        </body>
+
+<body id='page-top'>
+    
+    <!-- Navigation -->
+    <nav class="navbar">
+        <a href='#page-top' class="logo">Сайт-портфолио</a>
+        <button class="menu-toggle" onclick="toggleMenu()"><b>Меню</b></button>
+        <section class="nav-links">
+            <a href="index.html">На главную</a>
+            <a href="resume.html">Резюме</a>
+            <a href="gallery.html">Галерея</a>
+        </section>
+    </nav>
+
+    <!-- Contact form -->
+    <main class="contact-form">
+        <section>
+            <h2>Связаться со мной</h2>
+            <form id="form">
+                <label for="name">Имя:</label>
+                <input type="text" id="name" name="name" required>
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+                <label for="phone">Номер телефона:</label>
+                <input type="text" id="phone" name="phone">
+                <label for="message">Ваше сообщение:</label>
+                <textarea id="message" name="message" required></textarea>
+                <input type="submit" value="Отправить">
+            </form>
+        </section>
+
+    <!-- Другие способы связи -->
+        <section>
+            <h2>Также можно обращаться здесь:</h2>
+            <ul class="list-inline social-buttons">
+                <li class="list-inline-item">
+                    <a href="tel:+79536893390">
+                        <i class="Phone">📞</i>
+                    </a>
+                </li>
+                <li class="list-inline-item">
+                    <a href="http://vk.com/andrew.isupov">
+                        <i class="VK">VK</i>
+                    </a>
+                </li>
+                <li class="list-inline-item">
+                    <a href="http://t.me/andrewhooke">
+                        <i class="Telegram">TG</i>
+                    </a>
+                </li>
+                <li class="list-inline-item">
+                    <a href="mailto:stud179273@vyatsu.ru">
+                        <i class="Mail">📩</i>
+                    </a>
+                </li>
+            </ul>
+        </section>
     </main>
+
+    <!-- Copyright -->
     <footer>
         <p>Copyright &copy; Сайт-портфолио by AleksandraKrynina 2025</p>
     </footer>
+
+    <!-- JS include -->
+    <script src="java/script.js"></script>
+    <script src="https://cdn.emailjs.com/sdk/2.3.2/email.min.js"></script>
+    <script>
+        emailjs.init("OBFr8KmgnoC_loyAX");
+        document.getElementById('form').addEventListener('submit', function(event) {
+        event.preventDefault(); // Не обновляйте страницу, пока сообщение не отправлено
+        emailjs.sendForm('service_je4r3r5', 'template_1bfdxrg', this)
+        .then(function() {
+            alert('Сообщение успешно отправлено!');
+        }, function(error) {
+            alert('Ошибка отправки: ' + error);
+        });
+        });
+    </script>
+
 </body>
+</html>
