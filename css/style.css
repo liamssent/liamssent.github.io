@@ -1,136 +1,139 @@
 body {
-    font-family: 'Arial', sans-serif; 
-    margin: 0;
-    background: linear-gradient(to bottom, #f5e1b0, #6a5acd); 
-    color: #333; 
-}
-
-header {
-    color: #ffffff; 
-    padding: 80px 10px 25px 10px;
-    text-align: center;
-    background-color: rgba(106, 90, 205, 0.8); 
-}
-
-h1 {
-    font-size: 40px;
-    font-weight: bold;
-    font-style: italic; 
-}
-
-footer {
-    background-color: #5c4d8a; 
-    color: #ffffff; 
-    text-align: center;
-    padding: 10px;
-}
-
-p {
-    font-weight: normal;
-    font-size: 18px; 
-
-.gallery {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    text-align: center;
-    padding: 20px 0px 0px 0px;
-}
-
-.gallery p {
-    font-size: 30px;
-    padding: 15px 10px 0px 10px;
-    color: #cc0000; 
-}
-
-.gallery section img {
-    width: 280px;
-    max-height: 155px; 
-    margin: 10px; 
-    border: 2px solid #cc0000; 
-    border-radius: 8px; 
-}
-
-h2 {
-    font-weight: 700;
-    color: #6a5acd; 
-}
-
-a {
-    text-decoration: none;
-}
-
-.navbar {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    background-color: rgba(106, 90, 205, 0.8); 
-    color: white;
-    display: flex;
-    justify-content: space-between;
-    padding: 10px 20px;
-    box-sizing: border-box;
-    z-index: 1000;
-}
-
-.nav-links {
-    display: flex;
-    gap: 20px;
-}
-
-.nav-links a {
-    padding: 0.5em 1em; 
-    font-size: 130%;
-    color: #ffffff; 
-    background-color: #6a5acd; 
-    border-radius: 5px; 
-    transition: background-color 0.3s; 
-}
-
-.nav-links a:hover {
-    background-color: #8a7bca; 
-}
-
-.menu-toggle {
-    display: none;
-    cursor: pointer;
-    font-size: 1.2em;
-}
-
-@media (max-width: 600px) {
-    .nav-links {
-        display: none;
-        flex-direction: column;
-        position: absolute;
-        top: 60px;
-        left: 0;
-        width: 100%;
-        background-color: rgba(106, 90, 205, 0.8); 
-        padding: 10px;
-        box-sizing: border-box;
-        z-index: 999;
-    }
-
-    .nav-links.show {
-        display: flex;
-    }
-
-    .menu-toggle {
-        display: block;
-    }
-}
-
-.resume section, #bio {
-    width: 90%;
-    margin: 0 auto;
-    background-color: #fff; 
-    padding: 40px 20px 20px 20px;
-    border-radius: 8px;
-    font-size: 15px; 
-}
-
-.resume section table {
-    width: 100%;
-    border-collapse: collapse;
-    margin
+     font-family: 'Arial', sans-serif; /* Измененный шрифт */
+     margin: 0;
+     background: linear-gradient(to bottom, #f5e1b0, #6a5acd); /* Градиентный фон от бежевого к фиолетовому */
+     color: #333; /* Темный текст */
+ }
+ 
+ header {
+     color: #ffffff; /* Белый текст */
+     padding: 80px 10px 25px 10px;
+     text-align: center;
+     background-color: rgba(106, 90, 205, 0.8); /* Полупрозрачный фиолетовый фон */
+ }
+ 
+ h1 {
+     font-size: 40px;
+     font-weight: bold;
+     font-style: italic; /* Курсив для заголовка */
+ }
+ 
+ footer {
+     background-color: #5c4d8a; /* Темный фиолетовый подвал */
+     color: #ffffff; /* Белый текст */
+     text-align: center;
+     padding: 10px;
+ }
+ 
+ p {
+     font-weight: normal;
+     font-size: 20px; /* Увеличенный шрифт */
+     font-size: 18px; /* Увеличенный шрифт */
+ }
+ 
+ .gallery {
+     display: flex;
+     flex-wrap: wrap;
+     justify-content: center;
+     text-align: center;
+     padding: 20px 0px 0px 0px;
+ }
+ 
+ .gallery p {
+     font-size: 30px;
+     padding: 15px 10px 0px 10px;
+     color: #cc0000; /* Яркий акцент */
+ }
+ 
+ .gallery section img {
+     width: 280px;
+     max-height: 155px; 
+     margin: 10px; 
+     border: 2px solid #cc0000; /* Яркая рамка для изображений */
+     border-radius: 8px; /* Округлые углы */
+ }
+ 
+ h2 {
+     font-weight: 700;
+     color: #6a5acd; /* Яркий акцент для заголовков */
+ }
+ 
+ a {
+     text-decoration: none;
+ }
+ 
+ .navbar {
+     position: fixed;
+     top: 0;
+     left: 0;
+     width: 100%;
+     background-color: rgba(106, 90, 205, 0.8); /* Полупрозрачный фиолетовый фон навигации */
+     color: white;
+     display: flex;
+     justify-content: space-between;
+     padding: 10px 20px;
+     box-sizing: border-box;
+     z-index: 1000;
+ }
+ 
+ .nav-links {
+     display: flex;
+     gap: 20px;
+ }
+ 
+ .nav-links a {
+     padding: 0.5em 1em; /* Увеличенные отступы для кнопок */
+     font-size: 130%;
+     color: #ffffff; /* Белый текст для ссылок */
+     background-color: #6a5acd; /* Фиолетовый фон для кнопок */
+     border-radius: 5px; /* Округлые углы */
+     transition: background-color 0.3s; /* Плавный переход */
+ }
+ 
+ .nav-links a:hover {
+     background-color: #8a7bca; /* Светлее при наведении */
+ }
+ 
+ .menu-toggle {
+     display: none;
+     cursor: pointer;
+     font-size: 1.2em;
+ }
+ 
+ @media (max-width: 600px) {
+     .nav-links {
+         display: none;
+         flex-direction: column;
+         position: absolute;
+         top: 60px;
+         left: 0;
+         width: 100%;
+         background-color: rgba(106, 90, 205, 0.8); /* Полупрозрачный фон для мобильного меню */
+         padding: 10px;
+         box-sizing: border-box;
+         z-index: 999;
+     }
+ 
+     .nav-links.show {
+         display: flex;
+     }
+ 
+     .menu-toggle {
+         display: block;
+     }
+ }
+ 
+ .resume section, #bio {
+     width: 90%;
+     margin: 0 auto;
+     background-color: #fff; /* Белый фон для резюме */
+     padding: 40px 20px 20px 20px;
+     border-radius: 8px;
+     font-size: 20px; /* Увеличенный шрифт */
+     font-size: 15px; /* Увеличенный шрифт */
+ }
+ 
+ .resume section table {
+     width: 100%;
+     border-collapse: collapse;
+     margin
