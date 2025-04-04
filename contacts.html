@@ -1,98 +1,52 @@
 <!DOCTYPE html>
-<html lang="ru">
-
+<html lang="en">
 <head>
     <!-- ALL meta -->
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="author" content="Крынина Александра">
-    
-    <title>Контакты</title>
+
+    <title>Сайт-портфолио</title>
 
     <!-- ALL links -->
     <link rel="stylesheet" href="css/style.css">
-    <link rel="icon" href="img/favicon.ico" type="image/x-icon">
-
+    <link rel="icon" href="image/kotik.ico" type="image/x-icon">
 </head>
-
-<body id='page-top'>
+    <body id = page-top>
     
-    <!-- Navigation -->
-    <nav class="navbar">
-        <a href='#page-top' class="logo">Сайт-портфолио</a>
-        <button class="menu-toggle" onclick="toggleMenu()"><b>Меню</b></button>
-        <section class="nav-links">
-            <a href="index.html">На главную</a>
-            <a href="resume.html">Резюме</a>
-            <a href="gallery.html">Галерея</a>
-        </section>
-    </nav>
+        <!-- Navigation -->
+        <nav class="navbar">
+            <a href='#page-top' class="logo">Сайт-портфолио</a>
+            <button class="menu-toggle" onclick="toggleMenu()"><b>Меню</b></button>
+            <section class="nav-links">
+                <h2 class="custom-h2">Навигация:</h2> 
+                <a href="index.html">На главную</a>
+                <a href="resume.html">Резюме</a>
+                <a href="gallery.html">Галерея</a>
+            </section>
+        </nav>
 
-    <!-- Contact form -->
-    <main class="contact-form">
-        <section>
-            <h2>Связаться со мной</h2>
-            <form id="form">
-                <label for="name">Имя:</label>
-                <input type="text" id="name" name="name" required>
-                <label for="email">Email:</label>
-                <input type="email" id="email" name="email" required>
-                <label for="phone">Номер телефона:</label>
-                <input type="text" id="phone" name="phone">
-                <label for="message">Ваше сообщение:</label>
-                <textarea id="message" name="message" required></textarea>
-                <input type="submit" value="Отправить">
-            </form>
-        </section>
-
-    <!-- Другие способы связи -->
-        <section>
-            <h2>Также можно обращаться здесь:</h2>
-            <ul class="list-inline social-buttons">
-                <li class="list-inline-item">
-                    <a href="tel:+79536893390">
-                        <i class="Phone">📞</i>
-                    </a>
-                </li>
-                <li class="list-inline-item">
-                    <a href="https://vk.com/liamssent">
-                        <i class="VK">VK</i>
-                    </a>
-                </li>
-                <li class="list-inline-item">
-                    <a href="https://t.me/liamssent">
-                        <i class="Telegram">TG</i>
-                    </a>
-                </li>
-                <li class="list-inline-item">
-                    <a href="mailto:stud203806@vyatsu.ru">
-                        <i class="Mail">📩</i>
-                    </a>
-                </li>
-            </ul>
-        </section>
-    </main>
-
-    <!-- Copyright -->
+        <!-- Hobby -->
+        <header>
+            <b> Здесь я расскажу о своём хобби </b><br>
+        </header>
+        <main class='hobby' id = 'bio'>
+            <h2>Мои хобби:</h2>
+                <p>
+                    Хобби у меня не так много, как хотелось бы моей душе, но занять себя есть чем.<br>
+                    Люблю слушать музыку. Любимые на данный момент - pyrokinesis и Jackson Wang, ну и чуть-чуть k-pop ;)<br>
+                    Также бывает играю в компьютерные игры. Например - Wuthering Waves(что-то на подобии Genshin) и Counter-Strike. <br>
+                    Бывают моменты, когда я рисую. <br>
+                    Обожаю читать книги..<br>
+                    Вот и все в принципе. Немного, но меня пока все утраивает) <br><br>
+                </p>
+        </main>
+        <!-- Copyright -->
     <footer>
-        <p>Copyright &copy; Сайт-портфолио by AleksandraKrynina 2025</p>
+        <p>Copyright &copy; Сайт-портфолио by AlexandraKrynina 2025 </p>
     </footer>
 
     <!-- JS include -->
     <script src="java/script.js"></script>
-    <script src="https://cdn.emailjs.com/sdk/2.3.2/email.min.js"></script>
-    <script>
-        emailjs.init("OBFr8KmgnoC_loyAX");
-        document.getElementById('form').addEventListener('submit', function(event) {
-        event.preventDefault(); // Не обновляйте страницу, пока сообщение не отправлено
-        emailjs.sendForm('service_je4r3r5', 'template_1bfdxrg', this)
-        .then(function() {
-            alert('Сообщение успешно отправлено!');
-        }, function(error) {
-            alert('Ошибка отправки: ' + error);
-        });
-        });
-    </script>
-
 </body>
 </html>
