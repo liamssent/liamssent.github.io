@@ -1,218 +1,94 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Портфолио</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="navbar">
+            <a href="#" class="logo">Мое Портфолио</a>
+            <div class="menu-toggle">☰</div>
+            <nav class="nav-links">
+                <a href="#home">Главная</a>
+                <a href="#resume">Резюме</a>
+                <a href="#gallery">Галерея</a>
+                <a href="#hobbies">Хобби</a>
+            </nav>
+        </div>
+    </header>
+    
+    <main>
+        <section id="home">
+            <h2>Главная</h2>
+            <p>Добро пожаловать на мой сайт-портфолио! Здесь вы можете узнать обо мне, моих проектах и увлечениях.</p>
+        </section>
+        
+        <section id="resume" class="resume">
+            <h2>Резюме</h2>
+            <section>
+                <h3>Образование</h3>
+                <table>
+                    <tr>
+                        <th>Учебное заведение</th>
+                        <th>Год окончания</th>
+                    </tr>
+                    <tr>
+                        <td>Университет</td>
+                        <td>2023</td>
+                    </tr>
+                </table>
+            </section>
+            <section>
+                <h3>Опыт работы</h3>
+                <table>
+                    <tr>
+                        <th>Компания</th>
+                        <th>Должность</th>
+                        <th>Годы работы</th>
+                    </tr>
+                    <tr>
+                        <td>Компания 1</td>
+                        <td>Должность 1</td>
+                        <td>2020-2023</td>
+                    </tr>
+                </table>
+            </section>
+        </section>
+        
+        <section id="gallery" class="gallery">
+            <h2>Галерея</h2>
+            <p>Здесь будут представлены изображения моих проектов и работ.</p>
+            <img src="image1.jpg" alt="Описание изображения 1">
+            <img src="image2.jpg" alt="Описание изображения 2">
+            <img src="image3.jpg" alt="Описание изображения 3">
+        </section>
+        
+        <section id="hobbies">
+            <h2>Хобби</h2>
+            <p>Здесь я расскажу о своих увлечениях и хобби.</p>
+        </section>
+    </main>
+    
+    <footer>
+        <p>&copy; 2023 Мое Портфолио</p>
+        <ul class="social-buttons">
+            <li><a href="#" class="social-icon">F</a></li>
+            <li><a href="#" class="social-icon">T</a></li>
+            <li><a href="#" class="social-icon">I</a></li>
+        </ul>
+    </footer>
 
-* {
-    margin: 0;
-    padding: 0;
-}
+    <script>
+        // JavaScript для мобильного меню
+        const menuToggle = document.querySelector('.menu-toggle');
+        const navLinks = document.querySelector('.nav-links');
 
-body {
-    font-family: 'Poppins', sans-serif;
-    font-weight: 400;
-    color: #fff;
-    background: linear-gradient(180deg, rgba(0,0,0,1) 0%, rgba(82,0,30,1) 51%, rgba(224,15,58,1) 100%);
-    margin:0;
-    height: 100vh;
-}
-
-a{
-    text-decoration: none;
-}
-
-img {
-    max-width: 100%;
-}
-
-.container {
-    width: 1400px;
-    margin: 0 auto;
-}
-
-header {
-    padding: 50px 0;
-}
-
-header nav {
-    float: right;
-    width: 50%;
-}
-
-header nav ul {
-    list-style: none;
-    display: flex;
-    justify-content: space-between;
-}
-
-header nav ul li {
-    display: inline-block;
-}
-
-header nav ul li a {
-    color: #fff
-}
-
-header nav ul li.active::after{
-    content: '';
-    display: block;
-    width: 40px;
-    height: 5px;
-    background: #BF00DC;
-    border-radius: 10px;
-    position: relative;
-    top: 10px;
-    left: -15px;
-
-}
-
-header nav ul li:not(.active):not(.btn) a:hover {
-    border-bottom: 5px solid #BF00DC;
-}
-
-
-
-header nav ul li.btn a:hover {
-    background:#88019c;
-} 
-
-.hero--info {
-    display: flex;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 20px;
-    box-sizing: border-box;
-   position: relative;
-}
-
-.hero--info .hero-left {
- position: absolute;
- top: 230px;
- left: -270px;
- width: auto;
- max-width: 250%;
-
-}
-.hero--info .hero-right {
-    position: absolute;
-    top: 50px;
-    right: -200px;
-    width: 60%;
-}
-.hero--info .hi {
-    font-size: 96px;
-    line-height: 1;
-}
-
-.hero--info .title {
-    font-size: 96px;
-    font-weight: bold;
-    line-height: 1.2;
-    white-space: normal;
-}
-
-.flex-container {
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;  /* Занимаем всю высоту экрана */
-    margin: 0;
-}
-
-main {
-    flex: 1;  /* Занимает всё доступное пространство, сдвигая footer вниз */
-}
-
-footer {
-    background-color: linear-gradient(180deg, rgba(224,15,58,1) 0%, rgba(82,0,30,1) 1%, rgba(0,0,0,1) 2%);
-    text-align: center;
-    padding: 10px;
-    box-sizing: border-box;
-}
-
-
-
-.resume section, #bio {
-    width: 90%;
-    margin: 0 auto;
-    background-color: linear-gradient(180deg, rgba(0,0,0,1) 0%, rgba(82,0,30,1) 51%, rgba(224,15,58,1) 100%);
-    padding: 40px 20px 20px 20px;
-    border-radius: 8px;
-    font-size: 13px;
-}
-
-#bio {
-    padding: 5px 20px 20px 20px;
-}
-
-.resume section table {
-    width: 100%;
-    border-collapse: collapse;
-    margin-bottom: 20px;
-}
-.resume section table th, .resume section table td {
-    padding: 15px;
-    border: 1px solid #b4b1b1;
-}
-.resume section table th {
-    background-color: linear-gradient(180deg, rgba(0,0,0,1) 0%, rgba(82,0,30,1) 51%, rgba(224,15,58,1) 100%);
-    font-weight: bold;
-}
-
-.gallery {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    text-align: center;
-    padding: 20px 0px 0px 0px;
-}
-
-.gallery .h3 {
-    font-size: 100px;
-    padding: 150px 10px 0px 10px;
-}
-
-.gallery section img {
-    width: 300px;
-    max-height: 300px; 
-    margin: 10px; 
-}
-
-.hero--info {
-    display: flex;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 20px;
-    box-sizing: border-box;
-   position: relative;
-}
-
-.hero--info2 .hero-left2 {
- position: absolute;
- top: 330px;
- left: 70px;
- width: auto;
- max-width: 250%;
-
-}
-.hero--info2 .hero-right2 {
-    position: absolute;
-    top: 400px;
-    right: 698px;
-    width: 60%;
-}
-.hero--info2 .hi2 {
-    font-size: 48px;
-    line-height: 1;
-}
-
-.hero--info2 .title2 {
-    font-size: 48px;
-    font-weight: bold;
-    line-height: 1.2;
-    white-space: normal;
-}
-.hero--info2 .fr2 {
-    font-size: 24px;
-    line-height: 1.5;
-}
-.hero--info2 .sec2 {
-    font-size: 24px;
-    line-height: 1.5;
-}
+        menuToggle.addEventListener('click', () => {
+            navLinks.classList.toggle('show');
+        });
+    </script>
+</body>
+</html>
