@@ -1,34 +1,33 @@
 body {
-    font-family: 'Arial', sans-serif; /* Измененный шрифт */
+    font-family: 'Arial', sans-serif; 
     margin: 0;
-    background: linear-gradient(to bottom, #f5e1b0, #6a5acd); /* Градиентный фон от бежевого к фиолетовому */
-    color: #333; /* Темный текст */
+    background: linear-gradient(to bottom, #f5e1b0, #6a5acd); 
+    color: #333; 
 }
 
 header {
-    color: #ffffff; /* Белый текст */
+    color: #ffffff; 
     padding: 80px 10px 25px 10px;
     text-align: center;
-    background-color: rgba(106, 90, 205, 0.8); /* Полупрозрачный фиолетовый фон */
+    background-color: rgba(106, 90, 205, 0.8); 
 }
 
 h1 {
     font-size: 40px;
     font-weight: bold;
-    font-style: italic; /* Курсив для заголовка */
+    font-style: italic; 
 }
 
 footer {
-    background-color: #5c4d8a; /* Темный фиолетовый подвал */
-    color: #ffffff; /* Белый текст */
+    background-color: #5c4d8a; 
+    color: #ffffff; 
     text-align: center;
     padding: 10px;
 }
 
 p {
     font-weight: normal;
-    font-size: 18px; /* Увеличенный шрифт */
-}
+    font-size: 18px; 
 
 .gallery {
     display: flex;
@@ -41,20 +40,20 @@ p {
 .gallery p {
     font-size: 30px;
     padding: 15px 10px 0px 10px;
-    color: #cc0000; /* Яркий акцент */
+    color: #cc0000; 
 }
 
 .gallery section img {
     width: 280px;
     max-height: 155px; 
     margin: 10px; 
-    border: 2px solid #cc0000; /* Яркая рамка для изображений */
-    border-radius: 8px; /* Округлые углы */
+    border: 2px solid #cc0000; 
+    border-radius: 8px; 
 }
 
 h2 {
     font-weight: 700;
-    color: #6a5acd; /* Яркий акцент для заголовков */
+    color: #6a5acd; 
 }
 
 a {
@@ -66,7 +65,7 @@ a {
     top: 0;
     left: 0;
     width: 100%;
-    background-color: rgba(106, 90, 205, 0.8); /* Полупрозрачный фиолетовый фон навигации */
+    background-color: rgba(106, 90, 205, 0.8); 
     color: white;
     display: flex;
     justify-content: space-between;
@@ -81,16 +80,16 @@ a {
 }
 
 .nav-links a {
-    padding: 0.5em 1em; /* Увеличенные отступы для кнопок */
+    padding: 0.5em 1em; 
     font-size: 130%;
-    color: #ffffff; /* Белый текст для ссылок */
-    background-color: #6a5acd; /* Фиолетовый фон для кнопок */
-    border-radius: 5px; /* Округлые углы */
-    transition: background-color 0.3s; /* Плавный переход */
+    color: #ffffff; 
+    background-color: #6a5acd; 
+    border-radius: 5px; 
+    transition: background-color 0.3s; 
 }
 
 .nav-links a:hover {
-    background-color: #8a7bca; /* Светлее при наведении */
+    background-color: #8a7bca; 
 }
 
 .menu-toggle {
@@ -107,7 +106,7 @@ a {
         top: 60px;
         left: 0;
         width: 100%;
-        background-color: rgba(106, 90, 205, 0.8); /* Полупрозрачный фон для мобильного меню */
+        background-color: rgba(106, 90, 205, 0.8); 
         padding: 10px;
         box-sizing: border-box;
         z-index: 999;
@@ -125,10 +124,10 @@ a {
 .resume section, #bio {
     width: 90%;
     margin: 0 auto;
-    background-color: #fff; /* Белый фон для резюме */
+    background-color: #fff; 
     padding: 40px 20px 20px 20px;
     border-radius: 8px;
-    font-size: 15px; /* Увеличенный шрифт */
+    font-size: 15px; 
 }
 
 .resume section table {
