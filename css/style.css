@@ -27,7 +27,7 @@ footer {
 
 p {
     font-weight: normal;
-    font-size: 20px; /* Увеличенный шрифт */
+    font-size: 18px; /* Увеличенный шрифт */
 }
 
 .gallery {
@@ -128,7 +128,7 @@ a {
     background-color: #fff; /* Белый фон для резюме */
     padding: 40px 20px 20px 20px;
     border-radius: 8px;
-    font-size: 20px; /* Увеличенный шрифт */
+    font-size: 15px; /* Увеличенный шрифт */
 }
 
 .resume section table {
