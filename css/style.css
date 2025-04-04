@@ -1,7 +1,7 @@
 body {
     font-family: 'Arial', sans-serif; /* Измененный шрифт */
     margin: 0;
-    background: linear-gradient(to bottom right, #ffcccc, #ff6666); /* Градиентный фон */
+    background: linear-gradient(to bottom, #f5e1b0, #6a5acd); /* Градиентный фон от бежевого к фиолетовому */
     color: #333; /* Темный текст */
 }
 
@@ -9,20 +9,17 @@ header {
     color: #ffffff; /* Белый текст */
     padding: 80px 10px 25px 10px;
     text-align: center;
-    background-color: #990000; /* Темный красный заголовок */
-}
-
-main {
-    padding: 10px 25px 0px 25px;
+    background-color: rgba(106, 90, 205, 0.8); /* Полупрозрачный фиолетовый фон */
 }
 
 h1 {
     font-size: 40px;
     font-weight: bold;
+    font-style: italic; /* Курсив для заголовка */
 }
 
 footer {
-    background-color: #660000; /* Темный подвал */
+    background-color: #5c4d8a; /* Темный фиолетовый подвал */
     color: #ffffff; /* Белый текст */
     text-align: center;
     padding: 10px;
@@ -57,7 +54,7 @@ p {
 
 h2 {
     font-weight: 700;
-    color: #cc0000; /* Яркий акцент для заголовков */
+    color: #6a5acd; /* Яркий акцент для заголовков */
 }
 
 a {
@@ -69,7 +66,7 @@ a {
     top: 0;
     left: 0;
     width: 100%;
-    background-color: #990000; /* Темный фон навигации */
+    background-color: rgba(106, 90, 205, 0.8); /* Полупрозрачный фиолетовый фон навигации */
     color: white;
     display: flex;
     justify-content: space-between;
@@ -87,13 +84,13 @@ a {
     padding: 0.5em 1em; /* Увеличенные отступы для кнопок */
     font-size: 130%;
     color: #ffffff; /* Белый текст для ссылок */
-    background-color: #cc0000; /* Красный фон для кнопок */
+    background-color: #6a5acd; /* Фиолетовый фон для кнопок */
     border-radius: 5px; /* Округлые углы */
     transition: background-color 0.3s; /* Плавный переход */
 }
 
 .nav-links a:hover {
-    background-color: #ff3333; /* Светлее при наведении */
+    background-color: #8a7bca; /* Светлее при наведении */
 }
 
 .menu-toggle {
@@ -110,7 +107,7 @@ a {
         top: 60px;
         left: 0;
         width: 100%;
-        background-color: #990000; /* Темный фон для мобильного меню */
+        background-color: rgba(106, 90, 205, 0.8); /* Полупрозрачный фон для мобильного меню */
         padding: 10px;
         box-sizing: border-box;
         z-index: 999;
@@ -146,9 +143,11 @@ a {
 }
 
 .resume section table th {
-    background-color: #ffcccc; /* Светлый красный фон для заголовков таблицы */
+    background-color: #f5e1b0; /* Светлый бежевый фон для заголовков таблицы */
     font-weight: bold;
 }
 
 .contact-form {
     width: 80%;
+    margin: auto;
+   
