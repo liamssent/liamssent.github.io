@@ -1,156 +1,33 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
-
-* {
-    margin: 0;
-    padding: 0;
-}
-
 body {
-    font-family: 'Poppins', sans-serif;
-    font-weight: 400;
-    color: #333; /* Темный текст для лучшей читаемости */
-    background: linear-gradient(180deg, rgba(255, 245, 220, 1) 0%, rgba(210, 180, 140, 1) 51%, rgba(255, 228, 196, 1) 100%);
+    font-family: 'Arial', sans-serif; /* Измененный шрифт */
     margin: 0;
-    height: 100vh;
-}
-
-a {
-    text-decoration: none;
-}
-
-img {
-    max-width: 100%;
-}
-
-.container {
-    width: 1400px;
-    margin: 0 auto;
+    background: linear-gradient(to bottom, #f5e1b0, #6a5acd); /* Градиентный фон от бежевого к фиолетовому */
+    color: #333; /* Темный текст */
 }
 
 header {
-    padding: 50px 0;
+    color: #ffffff; /* Белый текст */
+    padding: 80px 10px 25px 10px;
+    text-align: center;
+    background-color: rgba(106, 90, 205, 0.8); /* Полупрозрачный фиолетовый фон */
 }
 
-header nav {
-    float: right;
-    width: 50%;
-}
-
-header nav ul {
-    list-style: none;
-    display: flex;
-    justify-content: space-between;
-}
-
-header nav ul li {
-    display: inline-block;
-}
-
-header nav ul li a {
-    color: #333; /* Темный текст для ссылок */
-}
-
-header nav ul li.active::after {
-    content: '';
-    display: block;
-    width: 40px;
-    height: 5px;
-    background: #BF00DC; /* Яркий акцент */
-    border-radius: 10px;
-    position: relative;
-    top: 10px;
-    left: -15px;
-}
-
-header nav ul li:not(.active):not(.btn) a:hover {
-    border-bottom: 5px solid #BF00DC; /* Акцент при наведении */
-}
-
-header nav ul li.btn a:hover {
-    background: #88019c; /* Фон кнопки при наведении */
-}
-
-.hero--info {
-    display: flex;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 20px;
-    box-sizing: border-box;
-    position: relative;
-}
-
-.hero--info .hero-left {
-    position: absolute;
-    top: 230px;
-    left: -270px;
-    width: auto;
-    max-width: 250%;
-}
-
-.hero--info .hero-right {
-    position: absolute;
-    top: 50px;
-    right: -200px;
-    width: 60%;
-}
-
-.hero--info .hi {
-    font-size: 96px;
-    line-height: 1;
-}
-
-.hero--info .title {
-    font-size: 96px;
+h1 {
+    font-size: 40px;
     font-weight: bold;
-    line-height: 1.2;
-    white-space: normal;
-}
-
-.flex-container {
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh; /* Занимаем всю высоту экрана */
-    margin: 0;
-}
-
-main {
-    flex: 1; /* Занимает всё доступное пространство, сдвигая footer вниз */
+    font-style: italic; /* Курсив для заголовка */
 }
 
 footer {
-    background-color: #d2b48c; /* Светлый бежевый подвал */
+    background-color: #5c4d8a; /* Темный фиолетовый подвал */
+    color: #ffffff; /* Белый текст */
     text-align: center;
     padding: 10px;
-    box-sizing: border-box;
 }
 
-.resume section, #bio {
-    width: 90%;
-    margin: 0 auto;
-    background-color: rgba(255, 255, 255, 0.9); /* Полупрозрачный белый фон */
-    padding: 40px 20px 20px 20px;
-    border-radius: 8px;
-    font-size: 13px;
-}
-
-#bio {
-    padding: 5px 20px 20px 20px;
-}
-
-.resume section table {
-    width: 100%;
-    border-collapse: collapse;
-    margin-bottom: 20px;
-}
-
-.resume section table th, .resume section table td {
-    padding: 15px;
-    border: 1px solid #d2b48c; /* Бежевый цвет для границ таблицы */
-}
-
-.resume section table th {
-    background-color: rgba(255, 245, 220, 1); /* Светлый бежевый фон для заголовков таблицы */
-    font-weight: bold;
+p {
+    font-weight: normal;
+    font-size: 20px; /* Увеличенный шрифт */
 }
 
 .gallery {
@@ -161,20 +38,100 @@ footer {
     padding: 20px 0px 0px 0px;
 }
 
-.gallery .h3 {
-    font-size: 100px;
-    padding: 150px 10px 0px 10px;
+.gallery p {
+    font-size: 30px;
+    padding: 15px 10px 0px 10px;
+    color: #cc0000; /* Яркий акцент */
 }
 
 .gallery section img {
-    width: 300px;
-    max-height: 300px; 
+    width: 280px;
+    max-height: 155px; 
     margin: 10px; 
+    border: 2px solid #cc0000; /* Яркая рамка для изображений */
+    border-radius: 8px; /* Округлые углы */
 }
 
-.hero--info2 .hero-left2 {
-    position: absolute;
-    top: 330px;
-    left: 70px;
-    width: auto;
-    max-width:
+h2 {
+    font-weight: 700;
+    color: #6a5acd; /* Яркий акцент для заголовков */
+}
+
+a {
+    text-decoration: none;
+}
+
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgba(106, 90, 205, 0.8); /* Полупрозрачный фиолетовый фон навигации */
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 20px;
+    box-sizing: border-box;
+    z-index: 1000;
+}
+
+.nav-links {
+    display: flex;
+    gap: 20px;
+}
+
+.nav-links a {
+    padding: 0.5em 1em; /* Увеличенные отступы для кнопок */
+    font-size: 130%;
+    color: #ffffff; /* Белый текст для ссылок */
+    background-color: #6a5acd; /* Фиолетовый фон для кнопок */
+    border-radius: 5px; /* Округлые углы */
+    transition: background-color 0.3s; /* Плавный переход */
+}
+
+.nav-links a:hover {
+    background-color: #8a7bca; /* Светлее при наведении */
+}
+
+.menu-toggle {
+    display: none;
+    cursor: pointer;
+    font-size: 1.2em;
+}
+
+@media (max-width: 600px) {
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        background-color: rgba(106, 90, 205, 0.8); /* Полупрозрачный фон для мобильного меню */
+        padding: 10px;
+        box-sizing: border-box;
+        z-index: 999;
+    }
+
+    .nav-links.show {
+        display: flex;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+}
+
+.resume section, #bio {
+    width: 90%;
+    margin: 0 auto;
+    background-color: #fff; /* Белый фон для резюме */
+    padding: 40px 20px 20px 20px;
+    border-radius: 8px;
+    font-size: 20px; /* Увеличенный шрифт */
+}
+
+.resume section table {
+    width: 100%;
+    border-collapse: collapse;
+    margin
