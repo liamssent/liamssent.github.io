@@ -1,413 +1,158 @@
-/* Основные настройки */
-:root {
-    --primary-color: #f8f9fa;
-    --secondary-color: #e9ecef;
-    --accent-color: #a5d8ff;
-    --dark-accent: #74c0fc;
-    --text-color: #495057;
-    --text-light: #6c757d;
-    --white: #ffffff;
-    --shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    --transition: all 0.3s ease;
-}
-
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
 body {
-    font-family: 'Inter', 'Helvetica Neue', Arial, sans-serif;
-    line-height: 1.6;
-    color: var(--text-color);
-    background-color: var(--primary-color);
+    font-family: 'Georgia', sans-serif, 'Courier New', Arial;
+    margin: 0;
+    background-color: #1a1a1a; /* Темный фон */
+    color: #f0f0f0; /* Светлый текст */
 }
 
-.container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 20px;
+header {
+    color: #ffffff; /* Белый текст */
+    padding: 80px 10px 25px 10px;
+    text-align: center;
+    background-color: #333; /* Темный заголовок */
 }
 
-.section {
-    padding: 80px 0;
+main {
+    padding: 10px 25px 0px 25px;
 }
 
-h1, h2, h3, h4 {
-    margin-bottom: 20px;
-    line-height: 1.2;
+header b {
+    font-size: 40px;
+    font-style: italic;
+    line-height: 40px;
+    font-family: 'Georgia', sans-serif, 'Courier New', 'Droid Serif', 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+}
+
+footer {
+    background-color: #222; /* Темный подвал */
+    color: #ffffff; /* Белый текст */
+    text-align: center;
+    padding: 10px;
 }
 
 p {
-    margin-bottom: 15px;
+    font-weight: normal;
+    font-size: 20px;
+}
+
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    text-align: center;
+    padding: 20px 0px 0px 0px;
+}
+
+.gallery p {
+    font-size: 30px;
+    padding: 15px 10px 0px 10px;
+    color: #fcba03; /* Яркий акцент */
+}
+
+.gallery section img {
+    width: 280px;
+    max-height: 155px; 
+    margin: 10px; 
+    border: 2px solid #fcba03; /* Яркая рамка для изображений */
+    border-radius: 8px; /* Округлые углы */
+}
+
+h2 {
+    font-weight: 700;
+    font-family: 'Georgia', sans-serif, 'Courier New', 'Montserrat', 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+    color: #fcba03; /* Яркий акцент для заголовков */
 }
 
 a {
     text-decoration: none;
-    color: inherit;
 }
 
-.btn {
-    display: inline-block;
-    background-color: var(--accent-color);
-    color: var(--white);
-    padding: 12px 25px;
-    border-radius: 5px;
-    font-weight: 500;
-    transition: var(--transition);
-    border: none;
-    cursor: pointer;
-}
-
-.btn:hover {
-    background-color: var(--dark-accent);
-    transform: translateY(-3px);
-}
-
-.highlight {
-    color: var(--accent-color);
-}
-
-/* Навигация */
 .navbar {
-    background-color: var(--white);
-    box-shadow: var(--shadow);
-    padding: 20px 0;
-    position: sticky;
+    position: fixed;
     top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #333; /* Темный фон навигации */
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 20px;
+    box-sizing: border-box;
     z-index: 1000;
 }
 
 .nav-links {
     display: flex;
-    justify-content: center;
-    gap: 30px;
+    gap: 20px;
 }
 
 .nav-links a {
-    color: var(--text-color);
-    font-weight: 500;
-    transition: var(--transition);
-    position: relative;
+    padding: 0.2em;
+    font-size: 130%;
+    color: #fcba03; /* Яркий акцент для ссылок */
+    text-decoration: none;
+}
+
+.menu-toggle {
+    display: none;
+    cursor: pointer;
+    font-size: 1.2em;
+}
+
+@media (max-width: 600px) {
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        background-color: #333; /* Темный фон для мобильного меню */
+        padding: 10px;
+        box-sizing: border-box;
+        z-index: 999;
+    }
+
+    .nav-links.show {
+        display: flex;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+}
+
+.logo {
+    font-size: 160%;
+    color: #fcba03; /* Яркий акцент для логотипа */
+    text-decoration: none;
+}
+
+.menu-toggle {
+    padding: 0.2em;
+    font-size: 130%;
+    color: white;
+    background-color: #fcba03; /* Яркий фон для кнопки меню */
 }
 
 .nav-links a:hover {
-    color: var(--accent-color);
+    color: #fff; /* Белый цвет при наведении */
 }
 
-.nav-links a::after {
-    content: '';
-    position: absolute;
-    width: 0;
-    height: 2px;
-    background: var(--accent-color);
-    bottom: -5px;
-    left: 0;
-    transition: var(--transition);
+.resume section, #bio {
+    width: 90%;
+    margin: 0 auto;
+    background-color: #2a2a2a; /* Темный фон для резюме */
+    padding: 40px 20px 20px 20px;
+    border-radius: 8px;
+    font-size: 13px;
 }
 
-.nav-links a:hover::after {
+#bio {
+    padding: 5px 20px 20px 20px;
+}
+
+.resume section table {
     width: 100%;
-}
-
-/* Герой секция */
-.hero {
-    background: linear-gradient(135deg, var(--secondary-color) 0%, var(--primary-color) 100%);
-    text-align: center;
-    padding: 120px 0;
-}
-
-.hero h1 {
-    font-size: 3rem;
-    margin-bottom: 20px;
-}
-
-.hero p {
-    font-size: 1.2rem;
-    max-width: 700px;
-    margin: 0 auto 30px;
-    color: var(--text-light);
-}
-
-/* Обо мне */
-.about-content {
-    display: flex;
-    align-items: center;
-    gap: 50px;
-    margin-top: 40px;
-}
-
-.about-image {
-    width: 300px;
-    height: 300px;
-    border-radius: 50%;
-    overflow: hidden;
-    flex-shrink: 0;
-    box-shadow: var(--shadow);
-}
-
-.about-image img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
-
-.skills {
-    margin-top: 30px;
-}
-
-.skills ul {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 10px;
-    list-style-type: none;
-}
-
-.skills li {
-    position: relative;
-    padding-left: 25px;
-}
-
-.skills li::before {
-    content: '✓';
-    color: var(--accent-color);
-    position: absolute;
-    left: 0;
-}
-
-/* Резюме */
-.resume-section {
-    background-color: var(--secondary-color);
-}
-
-.resume-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
-    gap: 30px;
-    margin-top: 40px;
-}
-
-.resume-card {
-    background-color: var(--white);
-    padding: 30px;
-    border-radius: 10px;
-    box-shadow: var(--shadow);
-}
-
-.resume-card h3 {
-    color: var(--accent-color);
-    margin-bottom: 25px;
-    display: flex;
-    align-items: center;
-    gap: 10px;
-}
-
-.resume-item {
-    margin-bottom: 25px;
-    padding-bottom: 25px;
-    border-bottom: 1px solid var(--secondary-color);
-}
-
-.resume-item:last-child {
-    margin-bottom: 0;
-    padding-bottom: 0;
-    border-bottom: none;
-}
-
-.date {
-    color: var(--text-light);
-    font-size: 0.9rem;
-    margin-bottom: 10px;
-}
-
-.download-resume {
-    text-align: center;
-    margin-top: 50px;
-}
-
-/* Галерея */
-.gallery-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-    gap: 20px;
-    margin-top: 40px;
-}
-
-.gallery-item {
-    position: relative;
-    border-radius: 10px;
-    overflow: hidden;
-    height: 250px;
-    box-shadow: var(--shadow);
-}
-
-.gallery-item img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    transition: var(--transition);
-}
-
-.gallery-overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.7);
-    color: var(--white);
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    opacity: 0;
-    transition: var(--transition);
-    padding: 20px;
-    text-align: center;
-}
-
-.gallery-item:hover .gallery-overlay {
-    opacity: 1;
-}
-
-.gallery-item:hover img {
-    transform: scale(1.1);
-}
-
-/* Хобби */
-.hobbies-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 30px;
-    margin-top: 40px;
-}
-
-.hobby-card {
-    background-color: var(--white);
-    padding: 30px;
-    border-radius: 10px;
-    text-align: center;
-    box-shadow: var(--shadow);
-    transition: var(--transition);
-}
-
-.hobby-card:hover {
-    transform: translateY(-10px);
-}
-
-.hobby-icon {
-    font-size: 2.5rem;
-    color: var(--accent-color);
-    margin-bottom: 20px;
-}
-
-/* Контакты */
-.contact-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
-    gap: 50px;
-    margin-top: 40px;
-}
-
-.contact-info {
-    background-color: var(--white);
-    padding: 30px;
-    border-radius: 10px;
-    box-shadow: var(--shadow);
-}
-
-.contact-info p {
-    display: flex;
-    align-items: center;
-    gap: 15px;
-    margin-bottom: 20px;
-}
-
-.social-links {
-    display: flex;
-    gap: 20px;
-    margin-top: 30px;
-}
-
-.social-links a {
-    font-size: 1.5rem;
-    color: var(--text-light);
-    transition: var(--transition);
-}
-
-.social-links a:hover {
-    color: var(--accent-color);
-}
-
-.contact-form {
-    background-color: var(--white);
-    padding: 30px;
-    border-radius: 10px;
-    box-shadow: var(--shadow);
-}
-
-.form-group {
-    margin-bottom: 20px;
-}
-
-.form-group input,
-.form-group textarea {
-    width: 100%;
-    padding: 15px;
-    border: 1px solid var(--secondary-color);
-    border-radius: 5px;
-    font-family: inherit;
-    transition: var(--transition);
-}
-
-.form-group textarea {
-    min-height: 150px;
-    resize: vertical;
-}
-
-.form-group input:focus,
-.form-group textarea:focus {
-    outline: none;
-    border-color: var(--accent-color);
-    box-shadow: 0 0 0 3px rgba(165, 216, 255, 0.3);
-}
-
-/* Футер */
-.footer {
-    text-align: center;
-    padding: 30px 0;
-    background-color: var(--white);
-    color: var(--text-light);
-    box-shadow: 0 -5px 10px rgba(0, 0, 0, 0.05);
-}
-
-/* Адаптивность */
-@media (max-width: 768px) {
-    .nav-links {
-        gap: 15px;
-        flex-wrap: wrap;
-    }
-    
-    .hero h1 {
-        font-size: 2.2rem;
-    }
-    
-    .about-content {
-        flex-direction: column;
-        text-align: center;
-    }
-    
-    .skills ul {
-        grid-template-columns: 1fr;
-    }
-    
-    .resume-grid,
-    .contact-grid {
-        grid-template-columns: 1fr;
-    }
-    
-    .gallery-grid {
-        grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-    }
-}
+    border-collapse: collapse;
+    margin-bottom:
