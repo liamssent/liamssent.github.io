@@ -1,30 +1,28 @@
 body {
-    font-family: 'Georgia', sans-serif, 'Courier New', Arial;
+    font-family: 'Arial', sans-serif; /* Измененный шрифт */
     margin: 0;
-    background-color: #1a1a1a; /* Темный фон */
-    color: #f0f0f0; /* Светлый текст */
+    background: linear-gradient(to bottom right, #ffcccc, #ff6666); /* Градиентный фон */
+    color: #333; /* Темный текст */
 }
 
 header {
     color: #ffffff; /* Белый текст */
     padding: 80px 10px 25px 10px;
     text-align: center;
-    background-color: #333; /* Темный заголовок */
+    background-color: #990000; /* Темный красный заголовок */
 }
 
 main {
     padding: 10px 25px 0px 25px;
 }
 
-header b {
+h1 {
     font-size: 40px;
-    font-style: italic;
-    line-height: 40px;
-    font-family: 'Georgia', sans-serif, 'Courier New', 'Droid Serif', 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+    font-weight: bold;
 }
 
 footer {
-    background-color: #222; /* Темный подвал */
+    background-color: #660000; /* Темный подвал */
     color: #ffffff; /* Белый текст */
     text-align: center;
     padding: 10px;
@@ -32,7 +30,7 @@ footer {
 
 p {
     font-weight: normal;
-    font-size: 20px;
+    font-size: 18px; /* Увеличенный шрифт */
 }
 
 .gallery {
@@ -46,21 +44,20 @@ p {
 .gallery p {
     font-size: 30px;
     padding: 15px 10px 0px 10px;
-    color: #fcba03; /* Яркий акцент */
+    color: #cc0000; /* Яркий акцент */
 }
 
 .gallery section img {
     width: 280px;
     max-height: 155px; 
     margin: 10px; 
-    border: 2px solid #fcba03; /* Яркая рамка для изображений */
+    border: 2px solid #cc0000; /* Яркая рамка для изображений */
     border-radius: 8px; /* Округлые углы */
 }
 
 h2 {
     font-weight: 700;
-    font-family: 'Georgia', sans-serif, 'Courier New', 'Montserrat', 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
-    color: #fcba03; /* Яркий акцент для заголовков */
+    color: #cc0000; /* Яркий акцент для заголовков */
 }
 
 a {
@@ -72,7 +69,7 @@ a {
     top: 0;
     left: 0;
     width: 100%;
-    background-color: #333; /* Темный фон навигации */
+    background-color: #990000; /* Темный фон навигации */
     color: white;
     display: flex;
     justify-content: space-between;
@@ -87,10 +84,16 @@ a {
 }
 
 .nav-links a {
-    padding: 0.2em;
+    padding: 0.5em 1em; /* Увеличенные отступы для кнопок */
     font-size: 130%;
-    color: #fcba03; /* Яркий акцент для ссылок */
-    text-decoration: none;
+    color: #ffffff; /* Белый текст для ссылок */
+    background-color: #cc0000; /* Красный фон для кнопок */
+    border-radius: 5px; /* Округлые углы */
+    transition: background-color 0.3s; /* Плавный переход */
+}
+
+.nav-links a:hover {
+    background-color: #ff3333; /* Светлее при наведении */
 }
 
 .menu-toggle {
@@ -107,7 +110,7 @@ a {
         top: 60px;
         left: 0;
         width: 100%;
-        background-color: #333; /* Темный фон для мобильного меню */
+        background-color: #990000; /* Темный фон для мобильного меню */
         padding: 10px;
         box-sizing: border-box;
         z-index: 999;
@@ -122,37 +125,30 @@ a {
     }
 }
 
-.logo {
-    font-size: 160%;
-    color: #fcba03; /* Яркий акцент для логотипа */
-    text-decoration: none;
-}
-
-.menu-toggle {
-    padding: 0.2em;
-    font-size: 130%;
-    color: white;
-    background-color: #fcba03; /* Яркий фон для кнопки меню */
-}
-
-.nav-links a:hover {
-    color: #fff; /* Белый цвет при наведении */
-}
-
 .resume section, #bio {
     width: 90%;
     margin: 0 auto;
-    background-color: #2a2a2a; /* Темный фон для резюме */
+    background-color: #fff; /* Белый фон для резюме */
     padding: 40px 20px 20px 20px;
     border-radius: 8px;
-    font-size: 13px;
-}
-
-#bio {
-    padding: 5px 20px 20px 20px;
+    font-size: 15px; /* Увеличенный шрифт */
 }
 
 .resume section table {
     width: 100%;
     border-collapse: collapse;
-    margin-bottom:
+    margin-bottom: 20px;
+}
+
+.resume section table th, .resume section table td {
+    padding: 10px;
+    border: 1px solid #ddd;
+}
+
+.resume section table th {
+    background-color: #ffcccc; /* Светлый красный фон для заголовков таблицы */
+    font-weight: bold;
+}
+
+.contact-form {
+    width: 80%;
