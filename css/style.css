@@ -160,28 +160,29 @@ footer {
 
 /* Стили для кнопок */
 .button-container {
-    position: relative; /* Устанавливаем относительное позиционирование для контейнера */
-    margin-bottom: 20px; /* Отступ снизу для кнопок */
+    position: absolute; /* Абсолютное позиционирование для контейнера */
+    top: 20px; /* Отступ сверху */
+    right: 20px; /* Отступ справа */
 }
 
 .button {
     display: inline-block; /* Отображение кнопки как строчный элемент */
-    padding: 15px 30px; /* Увеличение размера кнопки */
+    padding: 20px 40px; /* Увеличение размера кнопки */
     border: 2px solid #d1b89a; /* Рамка кнопки */
     border-radius: 5px; /* Скругление углов */
-    background-color: #f0f0f0; /* Цвет фона кнопки */
-    font-size: 16px;
+    background-color: #e2d6c5; /* Цвет фона кнопки (бежевый) */
+    font-size: 18px; /* Увеличение размера шрифта */
     text-decoration: none; /* Убираем подчеркивание ссылок */
     color: #333; /* Цвет текста кнопки */
     transition: background-color 0.3s, color 0.3s; /* Плавный переход */
 }
 
 .button:hover {
-    background-color: #d1b89a;
-    color: #fff;
+    background-color: #d1b89a; /* Цвет фона при наведении */
+    color: #fff; /* Цвет текста при наведении */
 }
 
 .button:active {
-    background-color: #a0522d;
-    color: #fff;
+    background-color: #a0522d; /* Цвет фона при нажатии */
+    color: #fff; /* Цвет текста при нажатии */
 }
