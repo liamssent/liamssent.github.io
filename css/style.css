@@ -99,26 +99,56 @@ table tbody tr:hover {
     gap: 20px; /* Промежуток между элементами */
 }
 
-.gallery-item {
-    border: 2px solid #d1b89a; /* Рамка бежевого цвета */
-    border-radius: 5px;
-    overflow: hidden; /* Обрезка изображения по рамке */
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Тень для галереи */
-    transition: transform 0.3s; /* Плавный переход для эффекта наведения */
-    aspect-ratio: 1 / 1; /* Сохранение пропорций 1:1 (квадрат) */
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    text-align: center;
+    padding: 20px 0px 0px 0px;
 }
 
-.gallery-item:hover {
-    transform: scale(1.05); /* Увеличение при наведении */
+.gallery .h3 {
+    font-size: 100px;
+    padding: 150px 10px 0px 10px;
 }
 
-.gallery-item img {
-    width: 100%; /* Ширина изображения 100% от родителя */
-    height: 100%; /* Высота изображения 100% от родителя */
-    object-fit: cover; /* Заполнение контейнера с обрезкой */
-    display: block; /* Убираем пробелы под изображением */
+.gallery section img {
+    width: 300px;
+    max-height: 300px; 
+    margin: 10px; 
 }
 
+
+/* Медиа-запросы для адаптивности */
+@media (max-width: 768px) {
+    header nav {
+        float: none; /* Убираем флоат для мобильных устройств */
+        text-align: center; /* Центрируем навигацию */
+        width: 100%; /* Ширина на весь экран */
+        margin-bottom: 20px; /* Отступ снизу */
+    }
+
+    .hero--info .hero-left,
+    .hero--info .hero-right {
+        position: static; /* Убираем абсолютное позиционирование */
+        width: 100%; /* Полная ширина для мобильных устройств */
+        order: -1; /* Меняем порядок отображения */
+        text-align: center; /* Центрируем текст */
+    }
+
+    .hero--info .hi,
+    .hero--info .title {
+        font-size: 36px; /* Уменьшаем размер шрифта для мобильных устройств */
+    }
+
+}
+
+@media (max-width: 480px) {
+    .hero--info .hi,
+    .hero--info .title {
+        font-size: 24px; /* Еще больше уменьшаем размер шрифта */
+    }
+}
 footer {
     text-align: center;
     padding: 20px;
