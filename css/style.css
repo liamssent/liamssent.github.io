@@ -167,7 +167,7 @@ footer {
 
 .button {
     display: inline-block; /* Отображение кнопки как строчный элемент */
-    padding: 20px 40px; /* Увеличение размера кнопки */
+    padding: 15px 25px; /* Увеличение размера кнопки */
     border: 2px solid #d1b89a; /* Рамка кнопки */
     border-radius: 5px; /* Скругление углов */
     background-color: #e2d6c5; /* Цвет фона кнопки (бежевый) */
