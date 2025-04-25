@@ -1,4 +1,4 @@
-* {
+• {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
@@ -25,10 +25,11 @@ h1 {
 nav ul {
     list-style: none;
     padding: 0;
+    text-align: center; /* Центрируем элементы навигации */
 }
 
 nav ul li {
-    display: inline;
+    display: inline-block; /* Важно для правильной работы с text-align: center */
     margin: 0 15px;
 }
 
@@ -40,6 +41,7 @@ nav ul li a {
     border: 2px solid #d1b89a; /* Рамка бежевого цвета */
     border-radius: 5px;
     transition: background-color 0.3s, color 0.3s; /* Плавный переход */
+    display: block; /* Занимать всю доступную ширину контейнера */
 }
 
 nav ul li a:hover {
@@ -93,7 +95,7 @@ table tbody tr:hover {
 
 .gallery {
     display: grid;
-    grid-template-columns: repeat(4, 1fr); /* 4 колонки */
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Адаптивные колонки, чтобы влезали на экран */
     gap: 20px; /* Промежуток между элементами */
 }
 
@@ -101,11 +103,19 @@ table tbody tr:hover {
     border: 2px solid #d1b89a; /* Рамка бежевого цвета */
     border-radius: 5px;
     overflow: hidden; /* Обрезка изображения по рамке */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Тень для галереи */
+    transition: transform 0.3s; /* Плавный переход для эффекта наведения */
+    aspect-ratio: 1 / 1; /* Сохранение пропорций 1:1 (квадрат) */
+}
+
+.gallery-item:hover {
+    transform: scale(1.05); /* Увеличение при наведении */
 }
 
 .gallery-item img {
     width: 100%; /* Ширина изображения 100% от родителя */
-    height: auto; /* Автоматическая высота для сохранения пропорций */
+    height: 100%; /* Высота изображения 100% от родителя */
+    object-fit: cover; /* Заполнение контейнера с обрезкой */
     display: block; /* Убираем пробелы под изображением */
 }
 
@@ -121,21 +131,27 @@ footer {
 /* Стили для кнопок */
 .button-container {
     position: relative; /* Устанавливаем относительное позиционирование для контейнера */
+    margin-bottom: 20px; /* Отступ снизу для кнопок */
 }
 
 .button {
-    position: absolute; /* Абсолютное позиционирование для кнопок */
-    top: 10px; /* Отступ сверху */
-    right: 10px; /* Отступ справа */
-    width: 150px; /* Ширина кнопки */
-    height: 50px; /* Высота кнопки */
+    display: inline-block; /* Отображение кнопки как строчный элемент */
+    padding: 15px 30px; /* Увеличение размера кнопки */
     border: 2px solid #d1b89a; /* Рамка кнопки */
     border-radius: 5px; /* Скругление углов */
     background-color: #f0f0f0; /* Цвет фона кнопки */
-    font-size: 16px; /* Размер шрифта */
-    cursor: pointer; /* Указатель при наведении */
-    transition: background-color 0.3s; /* Плавный переход цвета фона */
+    font-size: 16px;
+    text-decoration: none; /* Убираем подчеркивание ссылок */
+    color: #333; /* Цвет текста кнопки */
+    transition: background-color 0.3s, color 0.3s; /* Плавный переход */
 }
 
 .button:hover {
-    background-color: #d
+    background-color: #d1b89a;
+    color: #fff;
+}
+
+.button:active {
+    background-color: #a0522d;
+    color: #fff;
+}
