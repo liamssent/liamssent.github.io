@@ -74,6 +74,46 @@ h2 {
 table {
     width: 100%;
     border-collapse: collapse;
-    margin-top: 20
-   
-   
+    margin-top: 20px;
+}
+
+table th, table td {
+    border: 1px solid #d1b89a; /* Рамка таблицы */
+    padding: 10px;
+    text-align: left;
+}
+
+table th {
+    background-color: #e2d6c5; /* Цвет фона заголовков */
+}
+
+table tbody tr:hover {
+    background-color: #f0e4d7; /* Цвет фона при наведении на строку */
+}
+
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* 4 колонки */
+    gap: 20px; /* Промежуток между элементами */
+}
+
+.gallery-item {
+    border: 2px solid #d1b89a; /* Рамка бежевого цвета */
+    border-radius: 5px;
+    overflow: hidden; /* Обрезка изображения по рамке */
+}
+
+.gallery-item img {
+    width: 100%; /* Ширина изображения 100% от родителя */
+    height: auto; /* Автоматическая высота для сохранения пропорций */
+    display: block; /* Убираем пробелы под изображением */
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #e2d6c5;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
